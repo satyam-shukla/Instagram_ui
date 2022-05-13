@@ -3,7 +3,7 @@ const request = async (API) => {
     const response = await fetch(API);
     const user = await response.json();
     for (data of user) {
-        console.log(data);
+        // console.log(data);
         // data.posts.map((e) => { return e })
         document.querySelector(".status-wrapper").innerHTML += `
            <div class="status-card" >
