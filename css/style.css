@@ -21,20 +21,21 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    height: 50px;
+    height: 55px;
     background: #fff;
     border-bottom: 1px solid #dfdfdf;
     display: flex;
     justify-content: center;
     padding: 5px 0;
+    z-index: 999;
 }
 .nav-wrapper{
-        width: 70%;
-        max-width: 1000px;
-        height: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    width: 70%;
+    max-width: 1000px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .brand-img{
@@ -42,21 +43,29 @@ body{
     margin-top: 5px;
 }
 .search-box{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 200px;
-    height: 25px;
-    background: #fafafa;
-    border: 1px solid #dfdfdf;
-    border-radius: 2px;
-    color: rgba(0,0 ,0 ,0.5 );
-    text-align: center;
-    text-transform: capitalize;
+    display: flex;
+    width: 250px;
+    /* height: 25px; */
+    gap: .4rem;
+    border-radius: 6px;
+    background-color: #efefef;
+    padding: .3rem .3rem;
+    margin-right: -4rem;
 }
-.search-box::placeholder{
-    color: rgba(0,0,0,0.5);
+.search-box input{
+    border: none;
+    width: 90%;
+    background-color: #efefef;
+    overflow: hidden;
+    color: #8e8e8e;
+    font-weight: 400;
+    font-size: 1rem;
 }
+.search-box img{
+    width: 10%;
+}
+
+
 
 .nav-items{
     height: 22px;
@@ -73,8 +82,9 @@ body{
 .user-profile{
     width: 22px;
     border-radius: 50%;
-    background-image: url("../assest/profile-pic.png");
+    background-image: url("https://scontent.fdel3-2.fna.fbcdn.net/v/t39.30808-6/271703508_631718638044109_8430706525820817084_n.jpg?stp=dst-jpg_p526x296&_nc_cat=105&ccb=1-6&_nc_sid=e3f864&_nc_ohc=1wbdkNFNVM0AX9iyQW5&_nc_ht=scontent.fdel3-2.fna&oh=00_AT-afIFP7FkIHpYskLVMR0qFeqx49aF8YLCFr7GSMmG0Xg&oe=6286DE8E");
     background-size: cover;
+    margin-bottom: -6px;
 }
 .main{
     width: 100%;
@@ -121,6 +131,7 @@ body{
     flex-direction: column;
     align-items: center;
     margin-right: 15px;
+    cursor: pointer;
 }
 
 .profile-pic{
@@ -260,7 +271,7 @@ body{
     width: 100%;
     height: 50px;
     display: flex;
-    margin-top: -20px;
+    margin-top: -7px;
     align-items: center;
 }
 .reaction-wrapper .icon{
@@ -274,6 +285,7 @@ body{
 }
 .right-col{
     padding: 20px;
+    position: fixed;
 }
 
 .profile-card{
@@ -313,7 +325,7 @@ body{
     color: rgba(0,0,0,0.5);
     font-size: 12px;
     font-weight: 500;
-    margin-top: 5px;
+    margin-top: 4px;
 }
 
 .action-btn{
@@ -343,7 +355,7 @@ body{
 }
 @media(max-width:500px){
     .nav-items .icon{
-        margin: 0 5px;
+        margin: -5px 5px;
     }
     .post-image{
         height: 300px;
@@ -353,5 +365,81 @@ body{
 .post-comments{
     font-size: 16px;
     color: rgba(0,0 ,0 ,0.5 );
-    padding-bottom: 8px;
+}
+
+
+
+
+img {
+    vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+
+  
+.carousel-indicators {
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 15;
+    justify-content: center;
+    padding-left: 0;
+    margin-right: 15%;
+    margin-left: 15%;
+    list-style: none;
+    top: 102%;
+    background-color: black;
+}
+
+
+.carousel-indicators .active {
+    background-color: #3996f6;
+    }
+.carousel-indicators li {
+    width: 6px;
+    height: 6px;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    background-color: rgba(255,255,255,.5);
+    border-radius: 50%;
+    background-color: #a8a8a8;
+}
+
+.profile-card p{
+    margin-bottom: 0 !important;
+}
+
+.forFixed{
+    position: relative;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+}
+.footer2 ul,
+.footer1 ul{
+    display: flex;
+    list-style: none;
+    gap: .4rem;
+    font-size: .8rem;
+    margin-bottom: .3rem !important;
+    color: #cfcfcf;
+}
+
+.footer1 ul li,
+.footer2 ul li{
+    cursor: pointer;
+}
+
+.footertext{
+    font-size: .8rem;
+    color: #cfcfcf;
 }
